@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+<main>
+    <section class="landing-page">
+        <h1>Welcome to Tic Tac Toe</h1>
+        <button class="button">Start Game</button>
+    </section>
+
+    <div id="game-page">
+        <audio id="background-music" loop autoplay>
+            <source src="elevator_music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <canvas id="game-canvas" width="300" height="300"></canvas>
+        <p id="player-x-score" class="score">Score Player X: 0</p>
+        <p id="player-o-score" class="score">Score Player O: 0</p>
+        <button id="reset-board-button" class="button">Reset Board</button>
+        <button id="reset-score-button" class="button">Reset Score</button>
+        <button id="mute-button" class="button"><i class="fas fa-volume-up"></i></button>
+    </div>
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #333131;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    max-width: 600px;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    border-radius: 8px;
+    animation: fadeIn 1s ease;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: #0b02f3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+.landing-page .button:nth-child(even) {
+    background-color: #0262f3 !important;
+}
+
+.button:hover {
+    background-color: #0a0469;
+    transform: scale(1.05);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#game-page {
+    display: none;
+    position: relative;
+}
+
+canvas {
+    margin: 20px auto;
+    display: block;
+    background-color: #181818;
+    position: relative;
+    z-index: 1;
+}
+
+p {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.win-message {
+    color: #117e16;
+    font-size: 26px;
+    font-weight: bold;
+    animation: fadeIn 0.5s ease;
+    position: absolute;
+    top: calc(50% - 50px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: rgba(58, 54, 54, 0.8);
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+
+.tie-message {
+    color: #f44336;
+    font-size: 26px;
+    font-weight: bold;
+    animation: fadeIn 0.5s ease;
+    position: absolute;
+    top: calc(50% - 50px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: rgba(58, 54, 54, 0.8);
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: contain;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes scaleIn {
+    from {
+        -webkit-transform: scale(0);
+    }
+    to {
+        -webkit-transform: scale(1);
+    }
+}
